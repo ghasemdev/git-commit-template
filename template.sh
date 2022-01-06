@@ -32,7 +32,7 @@ printf "${CYAN}10. chore${RESET} - Other changes that don't modify src or test f
 printf "${CYAN}11. revert${RESET} - Reverts a previous commit.\n\n"
 
 while :; do
-    read TYPE
+    read -e TYPE
     # To lower case
     TYPE=${TYPE,,}
     # When input type is valid loop break
@@ -49,7 +49,7 @@ done
 # Scppe section
 printf "\n${BLUE}>>> Scope of this change (optional)?${RESET}\n"
 printf "The scope could be anything specifying place of the commit change e.g a file name, function name, class name, component name etc.\n\n"
-read SCOPE
+read -e SCOPE
 
 # Subject section
 printf "\n${BLUE}>>> Short description?${RESET}\n"
@@ -59,7 +59,7 @@ printf "  • don't capitalize first letter\n"
 printf "  • no dot (.) at the end\n\n"
 
 while :; do
-    read SHORT_DESC
+    read -e SHORT_DESC
     if [ -z "$SHORT_DESC" ]; then
         printf "${RED}❌ Short description can not be empty.${RESET}\n"
     else
@@ -70,12 +70,12 @@ done
 # Description section
 printf "\n${BLUE}>>> Long description (optional)?${RESET}\n"
 printf "The body should include the motivation for the change and contrast this with previous behavior.\n\n"
-read LONG_DESC
+read -e LONG_DESC
 
 # Breaking changes section
 printf "\n${BLUE}>>> Breaking changes (optional)?${RESET}\n"
 printf "note the reason for a breaking change within the commit.\n\n"
-read BREAKING_CHANGES
+read -e BREAKING_CHANGES
 
 # Closed issues section
 printf "\n${BLUE}>>> Closed issues (optional)?${RESET}\n"
@@ -83,7 +83,7 @@ printf "The syntax for closing keywords depends on whether the issue is in the s
 printf "  • Issue in the same repository -> Closes #10\n"
 printf "  • Issue in a different repository -> Fixes octo-org/octo-repo#100\n"
 printf "  • Multiple issues -> Resolves #10, resolves #123, resolves octo-org/octo-repo#100\n\n"
-read CLOSED_ISSUES
+read -e CLOSED_ISSUES
 
 # Result section
 if [ ! -z "$SCOPE" ]; then
