@@ -89,18 +89,18 @@ if [ ! -z "$BREAKING_CHANGES" ]; then
     BREAKING_CHANGES="BREAKING CHANGE: ${BREAKING_CHANGES}"
 fi
 
-printf "\n${GREEN}${TYPE}${SCOPE}: ${SHORT_DESC}
-${LONG_DESC}
-${BREAKING_CHANGES}
-${CLOSED_ISSUES}${RESET}\n\n"
+printf "\n    ${GREEN}${TYPE}${SCOPE}: ${SHORT_DESC}
+    ${LONG_DESC}
+    ${BREAKING_CHANGES}
+    ${CLOSED_ISSUES}${RESET}\n\n"
 
 # Git commit
 RESULT_CODE=$?
 if [ "$RESULT_CODE" = 0 ]; then
-    git commit -m "    ${TYPE}${SCOPE}: ${SHORT_DESC}
-    ${LONG_DESC}
-    ${BREAKING_CHANGES}
-    ${CLOSED_ISSUES}"
+    git commit -m "${TYPE}${SCOPE}: ${SHORT_DESC}
+${LONG_DESC}
+${BREAKING_CHANGES}
+${CLOSED_ISSUES}"
 else
     printf "\n${RED}❌ An error occurred. Please try again.${RESET}\n"
 fi
