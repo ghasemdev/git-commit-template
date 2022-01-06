@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Check in this directory git exist
+if [ ! -d .git ]; then
+    exit 1
+fi
+
 # Color formatting
 RED="\033[0;31m"
 GREEN="\033[0;32m"
@@ -104,4 +109,3 @@ ${CLOSED_ISSUES}"
 else
     printf "\n${RED}❌ An error occurred. Please try again.${RESET}\n"
 fi
-
