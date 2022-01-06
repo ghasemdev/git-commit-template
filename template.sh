@@ -89,15 +89,13 @@ if [ ! -z "$BREAKING_CHANGES" ]; then
     BREAKING_CHANGES="BREAKING CHANGE: ${BREAKING_CHANGES}"
 fi
 
-echo
-echo "${TYPE}${SCOPE}: ${SHORT_DESC}
+printf "\n${TYPE}${SCOPE}: ${SHORT_DESC}
 
 ${LONG_DESC}
 
 ${BREAKING_CHANGES}
 
-${CLOSED_ISSUES}" | awk '{ gsub(/ /,""); print }'
-echo
+${CLOSED_ISSUES}\n\n"
 
 # Git commit
 RESULT_CODE=$?
