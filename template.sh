@@ -1,0 +1,6 @@
+echo "Type of change"
+echo "Scope of this change"
+echo "Short description"
+echo "Long description"
+echo "Breaking changes"
+echo "Closed issues"
