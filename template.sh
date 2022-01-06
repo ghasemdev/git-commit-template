@@ -90,13 +90,13 @@ if [ ! -z "$BREAKING_CHANGES" ]; then
 fi
 
 echo
-echo "${GREEN}${TYPE}${SCOPE}: ${SHORT_DESC}
+echo "${TYPE}${SCOPE}: ${SHORT_DESC}
 
 ${LONG_DESC}
 
 ${BREAKING_CHANGES}
 
-${CLOSED_ISSUES}${RESET}" | awk "{gsub(/[ \t]+$/,""); print $0}"
+${CLOSED_ISSUES}" | awk '{ gsub(/ /,""); print }'
 echo
 
 # Git commit
@@ -105,9 +105,9 @@ if [ "$RESULT_CODE" = 0 ]; then
     git commit -m "${TYPE}${SCOPE}: ${SHORT_DESC}
 
 ${LONG_DESC}
-    
+
 ${BREAKING_CHANGES}
-    
+
 ${CLOSED_ISSUES}"
 else
     printf "\n${RED}❌ An error occurred. Please try again.${RESET}\n"
