@@ -1,6 +1,7 @@
 # git-commit-template
 
-To better write git commit messages, we can use template to specify the desired description and type of message. This file is prepared for use in zsh.
+To better write git commit messages, we can use template to specify the 
+desired description and type of message. This file is prepared for use in zsh.
 
 ## Learn This Articles
 
@@ -33,7 +34,8 @@ In the last command we refresh oh-my-zsh source.
 
 ## Usage
 
-All you have to do is call the `gct` command and fill in the items that are not optional at each step to prepare the message format.
+All you have to do is call the `gct` command and fill in the items that 
+are not optional at each step to prepare the message format.
 
 ![gct](images/1.png)
 
