@@ -36,6 +36,7 @@ In the last command we refresh oh-my-zsh source.
 All you have to do is call the `gct` command and fill in the items that are not optional at each step to prepare the message format.
 
 ![gct](images/1.png)
+
 ![result](images/2.png)
 
 With the `git log` command, we can see the message that we committed.
@@ -43,3 +44,4 @@ With the `git log` command, we can see the message that we committed.
 ![git log](images/3.png)
 
 ## Tanks For Supporting 🐯
+
