@@ -2,6 +2,7 @@
 
 # Check in this directory git exist
 if [ ! -d .git ]; then
+    echo "fatal: not a git repository (or any of the parent directories): .git"
     exit 1
 fi
 
