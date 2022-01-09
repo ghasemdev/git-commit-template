@@ -71,8 +71,12 @@ printf "  • no dot (.) at the end\n\n"
 
 while :; do
     read -e short_desc
+    limit_counter=${#short_desc}
     if [ -z "$short_desc" ]; then
         printf "${RED}❌ Short description can not be empty.${RESET}\n"
+    elif [[ $limit_counter > 50 ]]; then
+        printf "${RED}❌ The maximum character for header is 50, Please\
+ provide details in long descriptions.${RESET}\n"
     else
         break
     fi
@@ -109,6 +113,7 @@ if [ ! -z "$breaking_changes" ]; then
 fi
 
 printf "\n    ${GREEN}${type_var}${scope}: ${short_desc}
+
     ${long_desc}
     ${breaking_changes}
     ${closed_issues}${RESET}\n\n"
@@ -117,6 +122,7 @@ printf "\n    ${GREEN}${type_var}${scope}: ${short_desc}
 result_code=$?
 if [ "$result_code" = 0 ]; then
     git commit -m "${type_var}${scope}: ${short_desc}
+
 ${long_desc}
 ${breaking_changes}
 ${closed_issues}"
