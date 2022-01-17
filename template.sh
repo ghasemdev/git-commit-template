@@ -65,10 +65,9 @@ printf "  • no dot (.) at the end\n\n"
 
 while :; do
     read -e short_desc
-    limit_counter=${#short_desc}
     if [ -z "$short_desc" ]; then
         printf "${RED}❌ Short description can not be empty.${RESET}\n"
-    elif [[ $limit_counter > 50 ]]; then
+    elif [[ ${#limit_counter} -gt 50 ]]; then
         printf "${RED}❌ The maximum character for header is 50, Please\
  provide details in long descriptions.${RESET}\n"
     else
