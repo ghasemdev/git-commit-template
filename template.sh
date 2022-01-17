@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Check in this directory git exist
-if [ ! -d .git ]; then
-    echo "fatal: not a git repository (or any of the parent directories): .git"
-    exit 1
-fi
-
 # Color formatting
 RED="\033[0;31m"
 GREEN="\033[0;32m"
