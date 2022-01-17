@@ -16,7 +16,7 @@ desired description and type of message. This file is prepared for use in zsh.
 In the first step, in the home directory (zshrc directory) clone git-commit-template.
 
 ```bash
-➜  ~ git clone https://github.com/amueller/word_cloud.git
+➜  ~ git clone https://github.com/ghasemdev/git-commit-template.git
 ```
 
 Then we have to run this command to install.
