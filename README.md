@@ -50,7 +50,7 @@ With the `git log` command, we can see the message that we committed.
 
 ### signature
 
-You can use `-s` to add a signature to the gct.
+You can use `-s` or `sign` to add a signature to the gct.
 
 ```bash
 ➜  gct -s
