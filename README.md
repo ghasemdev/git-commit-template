@@ -1,5 +1,5 @@
 [![Version](https://shields.io/badge/VERSION-1.1.0-blue?style=for-the-badge)](https://github.com/ghasemdev/git-commit-template/releases/tag/v1.1.0)
-[![License MIT](https://shields.io/badge/LICENSE-MIT-orange?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![License Apache-2.0](https://shields.io/badge/LICENSE-APACHE--2.0-orange?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 # git-commit-template
 
