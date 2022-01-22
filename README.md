@@ -1,4 +1,4 @@
-[![Version](https://shields.io/badge/VERSION-1.1.0-blue?style=for-the-badge)](https://github.com/ghasemdev/git-commit-template/releases/tag/v1.1.0)
+[![Version](https://shields.io/badge/VERSION-1.2.0-blue?style=for-the-badge)](https://github.com/ghasemdev/git-commit-template/releases/tag/v1.1.0)
 [![License Apache-2.0](https://shields.io/badge/LICENSE-APACHE--2.0-orange?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 # git-commit-template
@@ -47,6 +47,15 @@ are not optional at each step to prepare the message format.
 With the `git log` command, we can see the message that we committed.
 
 ![git log](images/3.png)
+
+### signature
+
+You can use `-s` to add a signature to the gct.
+
+```bash
+➜  gct -s
+➜  gct sign
+```
 
 ## Tanks For Supporting 🐯
 
