@@ -150,4 +150,3 @@ else
     printf "\n${RED}❌ An error occurred. Please try again.${RESET}\n"
     exit 1
 fi
-
