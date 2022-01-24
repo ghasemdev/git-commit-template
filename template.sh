@@ -118,11 +118,11 @@ if [ ! -z "$long_desc" ]; then
 fi
 
 if [ ! -z "$breaking_changes" ]; then
-    massage="${massage}    BREAKING CHANGE: ${breaking_changes}\n"
+    massage="\n${massage}    BREAKING CHANGE: ${breaking_changes}\n"
 fi
 
 if [ ! -z "$closed_issues" ]; then
-    massage="${massage}    ${closed_issues}\n"
+    massage="\n${massage}    ${closed_issues}\n"
 fi
 
 printf "${massage}\n${RESET}"
@@ -133,13 +133,17 @@ if [ $? == 0 ]; then
         git commit -S -m "${type_var}${scope}: ${short_desc}
 
 ${long_desc}
+
 ${breaking_changes}
+
 ${closed_issues}"
     else
         git commit -m "${type_var}${scope}: ${short_desc}
 
 ${long_desc}
+
 ${breaking_changes}
+
 ${closed_issues}"
     fi
 else
