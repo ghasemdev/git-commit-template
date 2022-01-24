@@ -118,11 +118,11 @@ if [ ! -z "$long_desc" ]; then
 fi
 
 if [ ! -z "$breaking_changes" ]; then
-    massage="\n${massage}    BREAKING CHANGE: ${breaking_changes}\n"
+    massage="${massage}\n    BREAKING CHANGE: ${breaking_changes}\n"
 fi
 
 if [ ! -z "$closed_issues" ]; then
-    massage="\n${massage}    ${closed_issues}\n"
+    massage="${massage}\n    ${closed_issues}\n"
 fi
 
 printf "${massage}\n${RESET}"
