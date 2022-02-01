@@ -1,4 +1,4 @@
-[![Version](https://shields.io/badge/VERSION-1.2.1-blue?style=for-the-badge)](https://github.com/ghasemdev/git-commit-template/releases/tag/v1.1.0)
+[![Version](https://shields.io/badge/VERSION-1.3.0-blue?style=for-the-badge)](https://github.com/ghasemdev/git-commit-template/releases/tag/v1.1.0)
 [![License Apache-2.0](https://shields.io/badge/LICENSE-APACHE--2.0-orange?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 # git-commit-template
@@ -37,6 +37,8 @@ In the last command we refresh oh-my-zsh source.
 
 ## Usage
 
+### git commit template (gct)
+
 All you have to do is call the `gct` command and fill in the items that 
 are not optional at each step to prepare the message format.
 
@@ -48,13 +50,24 @@ With the `git log` command, we can see the message that we committed.
 
 ![git log](images/3.png)
 
+### git tag template (gtt)
+
+With `gtt` command is easy to tag your commits.
+
+![git log](images/gtt.png)
+
+![git log](images/gsh.png)
+
 ### signature
 
-You can use `-s` or `sign` to add a signature to the gct.
+You can use `-s` or `sign` to add a signature to the gct or gtt.
 
 ```bash
 ➜  gct -s
 ➜  gct sign
+
+➜  gtt -s
+➜  gtt sign
 ```
 
 ## Tanks For Supporting 🐯
