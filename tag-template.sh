@@ -42,11 +42,23 @@ while true; do
     esac
 done
 
-# Commit message section 
+# Commit message section
+header=""
 massage=""
 if [ ! -z "$COMMENT_FLAG" ]; then
 
-    printf "\n${CYAN}>>> What new 🚀 features have been added ?${RESET}\n"
+    printf "\n${CYAN}>>> Write a short description about this tag.${RESET}\n"
+    while :; do
+        read -e input
+        if [ -z "$input" ]; then
+            printf "${RED}❌ Header can not be empty.${RESET}\n"
+        else
+            header="$input"
+            break
+        fi
+    done
+
+    printf "\n${CYAN}>>> What new 🚀 features have been added (optional)?${RESET}\n"
     read -e features
     if [ ! -z "$features" ]; then
         massage="
@@ -55,7 +67,7 @@ if [ ! -z "$COMMENT_FLAG" ]; then
 "
     fi
 
-    printf "\n${CYAN}>>> Which 🐛 bugs have been fixed ?${RESET}\n"
+    printf "\n${CYAN}>>> Which 🐛 bugs have been fixed (optional)?${RESET}\n"
     read -e fixes
     if [ ! -z "$fixes" ]; then
         massage="${massage}
@@ -64,7 +76,7 @@ if [ ! -z "$COMMENT_FLAG" ]; then
 "
     fi
 
-    printf "\n${CYAN}>>> What 🧪 tests have been added ?${RESET}\n"
+    printf "\n${CYAN}>>> What 🧪 tests have been added (optional)?${RESET}\n"
     read -e tests
     if [ ! -z "$tests" ]; then
         massage="${massage}
@@ -73,7 +85,7 @@ if [ ! -z "$COMMENT_FLAG" ]; then
 "
     fi
 
-    printf "\n${CYAN}>>> 💭 Other explanations you want to add.${RESET}\n"
+    printf "\n${CYAN}>>> 💭 Other explanations you want to add (optional).${RESET}\n"
     read -e others
     if [ ! -z "$others" ]; then
         massage="${massage}
@@ -83,7 +95,10 @@ if [ ! -z "$COMMENT_FLAG" ]; then
     fi
 fi
 
-printf "\n${GREEN}v${version}\n${massage}\n${RESET}"
+printf "\n${GREEN}v${version} ${header}\n${massage}\n${RESET}"
+massage="${header}
+
+${massage}"
 
 # Git tag
 if [ $? == 0 ]; then
