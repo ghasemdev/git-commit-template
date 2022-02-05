@@ -15,7 +15,7 @@ RESET="\033[0m"
 
 # Valid types
 TYPES=("feat" "fix" "docs" "style" "refactor"
-    "pref" "test" "build" "ci" "chore" "revert")
+    "perf" "test" "build" "ci" "chore" "revert")
 
 NUMBERS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10" "11")
 
@@ -29,7 +29,7 @@ printf "${CYAN}4.  style${RESET} - Changes that do notaffect the meaning of \
 the code (white-space, formatting, missing semi-colons, etc).\n"
 printf "${CYAN}5.  refactor${RESET} - A Code change that neither fixes a bug \
 nor adds a feature.\n"
-printf "${CYAN}6.  pref${RESET} - A code change that improves performance.\n"
+printf "${CYAN}6.  perf${RESET} - A code change that improves performance.\n"
 printf "${CYAN}7.  test${RESET} - Adding missing tests or correcting existing \
 tests.\n"
 printf "${CYAN}8.  build${RESET} - Changes that effect the build system or \
